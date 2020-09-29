@@ -4,14 +4,14 @@ html, body, #root, #root > div
     background-color: #D0312D;
 }
 
-#login_main_container
+#signup_main_container
 {
     background-color: white;
     padding: 40px;
     border-radius: 10px;
 }
 
-#login_left_container
+#signup_left_container
 {
     display: flex;
     height: 100%;
@@ -19,7 +19,7 @@ html, body, #root, #root > div
     justify-content: center;
 }
 
-#login_right_container
+#signup_right_container
 {
     display: flex;
     height: 100%;
@@ -58,23 +58,14 @@ html, body, #root, #root > div
     background-color: green;
     border: 2px solid green;
     border-radius: 10px;
-    width: 100%;
+    width: 80%;
     color: white;
     font-weight: bold;
     padding: 10px;
     outline: none
 }
 
-#forgot_password_text
-{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    color: #696969;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#login_text
+#signup_text
 {
     display: flex;
     flex-direction: row;
@@ -92,7 +83,94 @@ html, body, #root, #root > div
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#signup_btn
+#login_btn
 {
     text-decoration: none
+}
+
+#upload_image_container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#upload_image_label
+{
+    color: #696969
+}
+
+#checkboxes_container
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 100%
+}
+
+#left_checkbox
+{
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#right_checkbox
+{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#checkbox_label
+{
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+#opening_hours_container, #opening_days_container
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%
+}
+
+#opening_hours_label, #opening_days_label
+{
+    color: #696969
+}
+
+#opening_hours_sub_label
+{
+    color: #696969;
+    font-size: 12px;
+    margin-right: 10px
+}
+
+#opening_hours_sub_container
+{
+    display: flex;
+    flex-direction: row
+}
+
+#opening_days_sub_container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+#from_hours_container
+{
+    margin-right: 10px;
+}
+
+#to_hours_container
+{
+    margin-left: 10px;
 }
