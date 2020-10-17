@@ -19,6 +19,8 @@ export class Template extends Component
                             <div className='col-xl-4'>
                                 <div id='signup_left_container'>
                                     <img src={require('../../assets/images/icon.png')} id='main_image'/>
+
+                                    <span id='main_image_text'>Online Food Depot</span>
                                 </div>
                             </div>
 
