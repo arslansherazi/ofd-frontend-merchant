@@ -1,87 +1,8 @@
-html, body, #root, #root > div
-{
-    height: 100%;
-    background-color: #D0312D;
-}
-
 #signup_main_container
 {
     background-color: white;
     padding: 40px;
     border-radius: 10px;
-}
-
-#signup_left_container
-{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-#signup_right_container
-{
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    align-items: center
-}
-
-#main_image
-{
-    width: 180px;
-    height: 140px
-}
-
-#merchant_portal
-{
-    margin-top: 20px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.nbs_input
-{
-    padding: 20px;
-    margin-top: 20px;
-    width: 100%;
-    background-color: #f2f2f2;
-    border: 2px solid #f2f2f2;
-    border-radius: 10px;
-    height: 25px;
-    outline: none
-}
-
-#submit_btn
-{
-    margin-top: 40px;
-    background-color: green;
-    border: 2px solid green;
-    border-radius: 10px;
-    width: 80%;
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-    outline: none
-}
-
-#signup_text
-{
-    display: flex;
-    flex-direction: row;
-    margin-top: 40px;
-    color: #696969;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#signup_text
-{
-    display: flex;
-    flex-direction: column;
-    margin-top: 80px;
-    color: #696969;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #login_btn
@@ -91,9 +12,6 @@ html, body, #root, #root > div
 
 #upload_image_container
 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     margin-top: 20px;
     width: 100%;
 }
@@ -105,8 +23,6 @@ html, body, #root, #root > div
 
 #checkboxes_container
 {
-    display: flex;
-    flex-direction: row;
     margin-top: 20px;
     width: 100%
 }
@@ -114,17 +30,11 @@ html, body, #root, #root > div
 #left_checkbox
 {
     margin-right: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
 }
 
 #right_checkbox
 {
     margin-left: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
 }
 
 #checkbox_label
@@ -135,8 +45,6 @@ html, body, #root, #root > div
 
 #opening_hours_container, #opening_days_container
 {
-    display: flex;
-    flex-direction: column;
     margin-top: 20px;
     width: 100%
 }
@@ -151,19 +59,6 @@ html, body, #root, #root > div
     color: #696969;
     font-size: 12px;
     margin-right: 10px
-}
-
-#opening_hours_sub_container
-{
-    display: flex;
-    flex-direction: row
-}
-
-#opening_days_sub_container
-{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap
 }
 
 #from_hours_container
