@@ -4,11 +4,11 @@ import { REQUEST_CONTENT_TYPE, API_BASE_URL, SOMETHING_WENT_WRONG, BASIC_AUTH_CR
 
 export default class CommonHelpers extends Component 
 {
-    static call_api = async (endpoint, method, params, auth_token=null) =>
+    static callApi = async (endpoint, method, params, authToken=null) =>
     {
         let authorization = 'Basic ' + Buffer.from(BASIC_AUTH_CREDENTIALS).toString('base64')
-        if (auth_token)
-            authorization = 'Bearer ' + auth_token
+        if (authToken)
+            authorization = 'Bearer ' + authToken
         params.encryption_disable_key = ENCRYPTION_DISABLE_KEY
         return fetch(API_BASE_URL + endpoint, 
         {
@@ -20,9 +20,9 @@ export default class CommonHelpers extends Component
             }
         })
         .then(response => response.json())
-        .then(response_json => 
+        .then(responseJson => 
         {
-            return response_json
+            return responseJson
         })
         .catch(error => 
         {

@@ -5,6 +5,24 @@ import { Link } from 'react-router-dom'
 
 export const template = component =>
 {
+    // temlaplate dynamic content
+    if (component.state.isUsernameVerified)
+        var usernameInput = <input type="text" className="nbs_input" placeholder="username" name="username" onChange={component.handleValue}/>
+    else
+        var usernameInput = <input type="text" className="nbs_input_red" placeholder="username" name="username" onChange={component.handleValue}/>
+
+    if (component.state.isPasswordVerified)
+        var passwordInput = <div className="d-flex nbs_input align-items-center">
+            <input type={component.state.passwordType} className="nbs_input_internal" placeholder="password" name="password" onChange={component.handleValue} />
+            <img src={component.state.passwordIcon} id="password_icon" alt="show_password_icon" onClick={component.handlePasswordIcon} />
+        </div>
+    else
+    var passwordInput = <div className="d-flex nbs_input_red align-items-center">
+        <input type={component.state.passwordType} className="nbs_input_internal" placeholder="password" name="password" onChange={component.handleValue} />
+        <img src={component.state.passwordIcon} id="password_icon" alt="show_password_icon" onClick={component.handlePasswordIcon} />
+    </div>
+
+    // template content
     return(
         <div className="container">
             <div className="row h-100">
@@ -21,9 +39,9 @@ export const template = component =>
                         <div className="col-xl-8 d-flex flex-column align-items-center justify-content-center" id="">
                             <h2 id="merchant_portal">Merchant Login Portal</h2>
 
-                            <input type="text" className="nbs_input" placeholder="username" name="username" onChange={component.handle_value}/>
-
-                            <input type="password" className="nbs_input" placeholder="password" name="password" onChange={component.handle_value}/>
+                            {usernameInput}
+                            
+                            {passwordInput}
 
                             <input type="button" id="submit_btn" value="Login" onClick={component.login}/>
 

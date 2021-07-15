@@ -43,6 +43,14 @@ html, body, #root, #root > div
     outline: none
 }
 
+.nbs_input_internal
+{
+    width: 100%;
+    background-color: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    outline: none
+}
+
 #submit_btn
 {
     margin-top: 40px;
@@ -86,4 +94,22 @@ html, body, #root, #root > div
 #signup_btn
 {
     text-decoration: none
+}
+
+.nbs_input_red
+{
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    height: 25px;
+    outline: none;
+    border: 1px solid red;
+}
+
+#password_icon
+{
+    width: 25px;
+    height: 25px;
 }
