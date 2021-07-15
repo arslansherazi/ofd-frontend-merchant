@@ -5,3 +5,5 @@ export const SOMETHING_WENT_WRONG = 'Something went wrong'
 export const MERCHANT_USER_TYPE = 2
 export const BASIC_AUTH_CREDENTIALS = 'lpHaNdeS:KdaAdL$KKJ$Sgf!%ebWp'
 export const ENCRYPTION_DISABLE_KEY = 'fgresdc456tgde%rf##&gfd123swedDfrt'
+export const ALLOWED_IMAGE_EXTENSIONS = ['jpg', 'png', 'jpeg']
+export const ALLOWED_IMAGE_SIZE_IN_MBS = 2

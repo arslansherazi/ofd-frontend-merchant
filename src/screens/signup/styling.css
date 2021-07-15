@@ -16,6 +16,15 @@
     width: 100%;
 }
 
+#upload_image_container_red
+{
+    border: 1px solid #D0312D;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 100%;
+}
+
 #upload_image_label
 {
     color: #696969
@@ -49,6 +58,14 @@
     width: 100%
 }
 
+#opening_hours_container_red, #opening_days_container_red
+{
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #D0312D;
+    width: 100%
+}
+
 #opening_hours_label, #opening_days_label
 {
     color: #696969
@@ -69,4 +86,16 @@
 #to_hours_container
 {
     margin-left: 10px;
+}
+
+.required_message
+{
+    color: #D0312D;
+    margin-top: 5px;
+    font-size: 12px
+}
+
+.required_message_container
+{
+    width: 100%
 }

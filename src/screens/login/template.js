@@ -6,21 +6,22 @@ import { Link } from 'react-router-dom'
 export const template = component =>
 {
     // temlaplate dynamic content
+    var usernameInput, passwordInput
     if (component.state.isUsernameVerified)
-        var usernameInput = <input type="text" className="nbs_input" placeholder="username" name="username" onChange={component.handleValue}/>
+        usernameInput = <input type="text" className="nbs_input" placeholder="username" name="username" onChange={component.handleValue}/>
     else
-        var usernameInput = <input type="text" className="nbs_input_red" placeholder="username" name="username" onChange={component.handleValue}/>
+        usernameInput = <input type="text" className="nbs_input_red" placeholder="username" name="username" onChange={component.handleValue}/>
 
     if (component.state.isPasswordVerified)
-        var passwordInput = <div className="d-flex nbs_input align-items-center">
+        passwordInput = <div className="d-flex nbs_input align-items-center">
             <input type={component.state.passwordType} className="nbs_input_internal" placeholder="password" name="password" onChange={component.handleValue} />
             <img src={component.state.passwordIcon} id="password_icon" alt="show_password_icon" onClick={component.handlePasswordIcon} />
         </div>
     else
-    var passwordInput = <div className="d-flex nbs_input_red align-items-center">
-        <input type={component.state.passwordType} className="nbs_input_internal" placeholder="password" name="password" onChange={component.handleValue} />
-        <img src={component.state.passwordIcon} id="password_icon" alt="show_password_icon" onClick={component.handlePasswordIcon} />
-    </div>
+        passwordInput = <div className="d-flex nbs_input_red align-items-center">
+            <input type={component.state.passwordType} className="nbs_input_internal" placeholder="password" name="password" onChange={component.handleValue} />
+            <img src={component.state.passwordIcon} id="password_icon" alt="show_password_icon" onClick={component.handlePasswordIcon} />
+        </div>
 
     // template content
     return(
