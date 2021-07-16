@@ -8,19 +8,29 @@ export const template = component =>
     // temlaplate dynamic content
     var usernameInput, passwordInput
     if (component.state.isUsernameVerified)
-        usernameInput = <input type="text" className="nbs_input" placeholder="username" name="username" onChange={component.handleValue}/>
-    else
-        usernameInput = <input type="text" className="nbs_input_red" placeholder="username" name="username" onChange={component.handleValue}/>
-
-    if (component.state.isPasswordVerified)
-        passwordInput = <div className="d-flex nbs_input align-items-center">
-            <input type={component.state.passwordType} className="nbs_input_internal" placeholder="password" name="password" onChange={component.handleValue} />
-            <img src={component.state.passwordIcon} id="password_icon" alt="show_password_icon" onClick={component.handlePasswordIcon} />
+        usernameInput = <div class="d-flex flex-column required_message_container">
+            <input type="text" className="nbs_input" placeholder="username" name="username" onChange={component.handleValue}/>
         </div>
     else
-        passwordInput = <div className="d-flex nbs_input_red align-items-center">
-            <input type={component.state.passwordType} className="nbs_input_internal" placeholder="password" name="password" onChange={component.handleValue} />
-            <img src={component.state.passwordIcon} id="password_icon" alt="show_password_icon" onClick={component.handlePasswordIcon} />
+        usernameInput = <div class="d-flex flex-column required_message_container">
+            <input type="text" className="nbs_input_red" placeholder="username" name="username" onChange={component.handleValue}/>
+            <span class="required_message">*{component.state.usernameVerificationMessage}</span>
+        </div>
+
+    if (component.state.isPasswordVerified)
+        passwordInput = <div class="d-flex flex-column required_message_container">
+            <div className="d-flex nbs_input align-items-center">
+                <input type={component.state.passwordType} className="nbs_input_internal" placeholder="password" name="password" onChange={component.handleValue} />
+                <img src={component.state.passwordIcon} id="password_icon" alt="show_password_icon" onClick={component.handlePasswordIcon} />
+            </div>
+        </div>
+    else
+        passwordInput = <div class="d-flex flex-column required_message_container">
+            <div className="d-flex nbs_input_red align-items-center">
+                <input type={component.state.passwordType} className="nbs_input_internal" placeholder="password" name="password" onChange={component.handleValue} />
+                <img src={component.state.passwordIcon} id="password_icon" alt="show_password_icon" onClick={component.handlePasswordIcon} />
+            </div>
+            <span class="required_message">*{component.state.passwordVerificationMessage}</span>
         </div>
 
     // template content

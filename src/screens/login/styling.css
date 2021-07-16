@@ -113,3 +113,15 @@ html, body, #root, #root > div
     width: 25px;
     height: 25px;
 }
+
+/* Media queries */
+@media only screen and (max-width: 600px)
+{
+	#login_main_container
+    {
+        background-color: white;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 10px;
+    }
+}

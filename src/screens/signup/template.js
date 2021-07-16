@@ -234,7 +234,7 @@ export const template = component =>
     return(
         <div className="container">
             <div className="row h-100">
-                <div className="col-xl-1"></div>
+                <div className="col-xl-1" id="signup_empty_column_top"></div>
 
                 <div className="col-xl-10 my-auto" id="signup_main_container">
                     <div className="row h-100">
@@ -247,7 +247,7 @@ export const template = component =>
                         <div className="col-xl-8">
                             <div className="d-flex flex-column align-items-center justify-content-center">
                                 <h2 id="merchant_portal">Merchant Signup Portal</h2>
-
+                        
                                 {name}
 
                                 <input type="text" name="titleText" className="nbs_input" placeholder="title text"/>
@@ -282,7 +282,7 @@ export const template = component =>
 
                                 <input type="button" id="submit_btn" value="Signup" onClick={component.signup} />
 
-                                <Link to="/" id="login_btn">
+                                <Link to="/login" id="login_btn">
                                     <span id="login_text">Already have an account. Login?</span>
                                 </Link>
                             </div>
@@ -290,7 +290,7 @@ export const template = component =>
                     </div>
                 </div>
 
-                <div className="col-xl-1"></div>
+                <div className="col-xl-1" id="signup_empty_column_bottom"></div>
             </div>
         </div>
     )

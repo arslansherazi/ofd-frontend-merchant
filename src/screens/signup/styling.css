@@ -1,8 +1,8 @@
 #signup_main_container
 {
     background-color: white;
-    padding: 40px;
     border-radius: 10px;
+    padding: 20px;
 }
 
 #login_btn
@@ -98,4 +98,25 @@
 .required_message_container
 {
     width: 100%
+}
+
+@media only screen and (max-width: 600px)
+{
+	#signup_main_container
+    {
+        background-color: white;
+        border-radius: 10px;
+        margin: 15px;
+        padding: 20px;
+    }
+
+    #signup_empty_column_top
+    {
+        margin: 10px;
+    }
+
+    #signup_empty_column_bottom
+    {
+        margin: 20px;
+    }
 }

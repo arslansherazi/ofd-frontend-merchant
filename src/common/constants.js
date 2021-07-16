@@ -7,3 +7,6 @@ export const BASIC_AUTH_CREDENTIALS = 'lpHaNdeS:KdaAdL$KKJ$Sgf!%ebWp'
 export const ENCRYPTION_DISABLE_KEY = 'fgresdc456tgde%rf##&gfd123swedDfrt'
 export const ALLOWED_IMAGE_EXTENSIONS = ['jpg', 'png', 'jpeg']
 export const ALLOWED_IMAGE_SIZE_IN_MBS = 2
+export const SUCCESS_STATUS_CODE = 200
+export const USERNAME_REQUIRED_MESSAGE = 'Username is required'
+export const PASSWORD_REQUIRED_MESSAGE = 'Password is required'
