@@ -1,0 +1,131 @@
+#top_bar
+{
+    background-color: #D0312D;
+    padding: 20px
+}
+
+#top_bar_title_text
+{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#menu_button
+{
+    width: 40px;
+    height: 35px
+}
+
+#merchant_name
+{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 100px 
+}
+
+#logout_btn
+{
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#logout_btn:hover
+{
+    opacity: 0.8;
+}
+
+#ofd_icon_white
+{
+    width: 50px;
+    height: 50px
+}
+
+.sidebar_item:hover
+{
+    color: #D0312D;
+    cursor: pointer
+}
+
+.sidebar_item
+{
+    margin-top: 20px;
+    margin-left: 20px
+}
+
+.sidebar_item_text
+{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.sidebar_item_image
+{
+    width: 30px;
+    height: 30px;
+    margin-right: 25px
+}
+
+.sidebar_item_secondary
+{
+    margin-top: 40px
+}
+
+.version_text
+{
+    margin-top: 80px;
+    margin-left: 20px;
+    color: #989898
+}
+
+/* media query 1 */
+@media only screen and (max-width: 600px)
+{
+	#ofd_logo_container
+    {
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+    }
+
+    #logout_btn
+    {
+        margin-top: 10px
+    }
+
+    #sidebar_menu_items_container
+    {
+        margin-top: 200px
+    }
+}
+
+/* media query 2 */
+@media only screen and (max-width: 800px) and (min-width: 601px)
+{
+    #ofd_logo_container
+    {
+        margin-left: 60px;
+    }
+
+    #top_bar_title_text
+    {
+        text-align: center;
+    }
+
+    #sidebar_menu_items_container
+    {
+        margin-top: 180px;
+    }
+}
+
+/* media query 3 */
+@media only screen and (min-width: 801px)
+{
+    #sidebar_menu_items_container
+    {
+        margin-top: 120px;
+    }
+}

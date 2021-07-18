@@ -4,6 +4,7 @@ import Router from './App'
 import store, { persistor } from  './helpers/store'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
+import 'antd/dist/antd.css'
 
 ReactDOM.render(
     <Provider store={store}>

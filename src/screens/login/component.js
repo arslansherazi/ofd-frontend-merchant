@@ -18,8 +18,8 @@ function mapStateToProps(state)
 function mapDispatchToProps(dispatch)
 {
     return {
-        login: (isLoggedIn, authToken) =>
-            dispatch(login(isLoggedIn, authToken))
+        login: (isLoggedIn, authToken, merchantName) =>
+            dispatch(login(isLoggedIn, authToken, merchantName))
     }
 }
 
@@ -35,6 +35,11 @@ class Login extends Component
         passwordType: 'password',
         usernameVerificationMessage: USERNAME_REQUIRED_MESSAGE,
         passwordVerificationMessage: PASSWORD_REQUIRED_MESSAGE
+    }
+
+    componentDidMount() 
+    {
+        document.body.style.backgroundColor = '#D0312D'
     }
 
     login = () => 
@@ -66,7 +71,8 @@ class Login extends Component
             {
                 const isLoggedIn = true
                 const authToken = response.data.auth_token
-                this.props.login(isLoggedIn, authToken)
+                const merchantName = response.data.name
+                this.props.login(isLoggedIn, authToken, merchantName)
                 this.props.history.push('/')
             }
             else 

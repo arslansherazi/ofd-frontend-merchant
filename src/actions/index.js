@@ -1,2 +1,7 @@
-export const login = (isLoggedIn, authToken) => ({'type': 'LOGIN', 'isLoggedIn': isLoggedIn, 'authToken': authToken}) 
+export const login = (isLoggedIn, authToken, merchantName) => ({
+    'type': 'LOGIN', 
+    'isLoggedIn': isLoggedIn, 
+    'authToken': authToken, 
+    'merchantName': merchantName
+}) 
 export const logout = () => ({'type': 'LOGOUT'})

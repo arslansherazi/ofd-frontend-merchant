@@ -1,6 +1,6 @@
 # Important Keywords and Terms
 ### exact 
-used to match the patch exactly instead of partially match the path
+used to match the path exactly instead of partially match the path
 
 # Important Commands
 Start react server
@@ -11,7 +11,7 @@ Install dependencies
 ~~~
 npm install
 ~~~
-Eject the react project into core js code (deployable)
+Eject the react project into core js code (deployable) - We cannot revert back once eject the project
 ~~~
 npm run eject
 ~~~

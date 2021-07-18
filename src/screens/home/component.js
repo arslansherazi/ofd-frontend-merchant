@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { template } from './template.js'
 import  { Redirect } from 'react-router-dom'
-import { logout } from '../../actions'
 import { connect } from 'react-redux'
 
 function mapStateToProps(state)
@@ -14,20 +13,17 @@ function mapStateToProps(state)
 function mapDispatchToProps(dispatch)
 {
     return {
-        logout: () =>
-            dispatch(logout())
     }
 }
 
 
 class Home extends Component
 {
-    logout = () =>
+    componentDidMount() 
     {
-        this.props.logout()
-        this.props.history.push('/login')
+        document.body.style.backgroundColor = 'white'
     }
-
+    
     render()
     {
         if (!this.props.authData.isLoggedIn)

@@ -3,12 +3,14 @@ export const auth = (state=[], action) => {
         case 'LOGIN':
             return {
                 isLoggedIn: action.isLoggedIn,
-                authToken: action.authToken
+                authToken: action.authToken,
+                merchantName: action.merchantName
             }
         case 'LOGOUT':
             return {
                 isLoggedIn: false,
-                authToken: null
+                authToken: null,
+                merchantName: ''
             }
         default:
             return state

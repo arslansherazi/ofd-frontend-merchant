@@ -2,9 +2,25 @@ import React, { Component } from 'react'
 import { template } from './template.js'
 import CommonHelpers from '../../common/common_helpers'
 import { SIGNUP_ENDPOINT, MERCHANT_USER_TYPE, ALLOWED_IMAGE_EXTENSIONS, ALLOWED_IMAGE_SIZE_IN_MBS } from '../../common/constants'
+import  { Redirect } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 
-export default class Signup extends Component
+function mapStateToProps(state)
+{
+    return {
+        authData: state.auth
+    }
+}
+
+function mapDispatchToProps(dispatch)
+{
+    return {
+    }
+}
+
+
+class Signup extends Component
 {
     state = {
         name: '',
@@ -50,6 +66,12 @@ export default class Signup extends Component
         isOpeningDaysVerified: true,
         isPasswordValid: true
     }
+
+    componentDidMount() 
+    {
+        document.body.style.backgroundColor = '#D0312D'
+    }
+
 
     signup = () =>
     {
@@ -228,6 +250,11 @@ export default class Signup extends Component
 
     render() 
     {
-        return template(this)
+        if (this.props.authData.isLoggedIn)
+            return <Redirect to='/' />
+        else
+            return template(this)
     }
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Signup)
