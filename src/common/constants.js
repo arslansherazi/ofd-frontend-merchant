@@ -10,3 +10,6 @@ export const ALLOWED_IMAGE_SIZE_IN_MBS = 2
 export const SUCCESS_STATUS_CODE = 200
 export const USERNAME_REQUIRED_MESSAGE = 'Username is required'
 export const PASSWORD_REQUIRED_MESSAGE = 'Password is required'
+export const EMAIL_REQUIRED_MESSAGE = 'Email is required'
+export const SEND_EMAIL_ENDPOINT = 'send_email'
+export const VALIDATE_EMAIL_ENDPOINT = 'validate_email'

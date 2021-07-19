@@ -56,7 +56,9 @@ export const template = component =>
 
                             <input type="button" id="submit_btn" value="Login" onClick={component.login}/>
 
-                            <span id="forgot_password_text">Forgot password?</span>
+                            <Link to="/forgot/password" id="signup_btn">
+                                <span id="forgot_password_text">Forgot password?</span>
+                            </Link>
 
                             <Link to="/signup" id="signup_btn">
                                 <span id="login_text">Create your account &#8594;</span>
