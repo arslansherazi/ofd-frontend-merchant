@@ -1,5 +1,5 @@
 export const REQUEST_CONTENT_TYPE = 'application/json'
-export const API_BASE_URL = 'http://192.168.0.101:8000/ofd_apis/v110/'
+export const API_BASE_URL = 'http://192.168.0.103:8000/ofd_apis/v110/'
 export const LOGIN_ENDPOINT = 'login'
 export const SOMETHING_WENT_WRONG = 'Something went wrong'
 export const MERCHANT_USER_TYPE = 2
@@ -13,3 +13,5 @@ export const PASSWORD_REQUIRED_MESSAGE = 'Password is required'
 export const EMAIL_REQUIRED_MESSAGE = 'Email is required'
 export const SEND_EMAIL_ENDPOINT = 'send_email'
 export const VALIDATE_EMAIL_ENDPOINT = 'validate_email'
+export const ERROR_MESSAGE_TITLE = 'Error'
+export const SUCCESS_MESSAGE_TITLE = 'Success'

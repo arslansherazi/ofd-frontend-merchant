@@ -1,6 +1,7 @@
 import React from 'react'
 import '../login/styling.css'
 import { Link } from 'react-router-dom'
+import { Modal } from 'antd'
 
 
 export const template = component =>
@@ -47,6 +48,17 @@ export const template = component =>
 
                 <div class="col-xl-2"></div>
             </div>
+
+            <Modal
+                title={component.state.apiMessageHeading}
+                centered
+                visible={component.state.isApiMessageContainerVisible}
+                onOk={() => component.setState({isApiMessageContainerVisible: false})}
+                onCancel={() => component.setState({isApiMessageContainerVisible: false})}
+                width={400}
+            >
+                <h6>{component.state.apiMessage}</h6>
+            </Modal>
         </div>
     )
 }

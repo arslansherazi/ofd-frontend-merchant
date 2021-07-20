@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { template } from './template.js'
 import CommonHelpers from '../../common/common_helpers'
 import { 
-    SEND_EMAIL_ENDPOINT, MERCHANT_USER_TYPE, EMAIL_REQUIRED_MESSAGE, ENCRYPTION_DISABLE_KEY, SUCCESS_STATUS_CODE, VALIDATE_EMAIL_ENDPOINT
+    SEND_EMAIL_ENDPOINT, MERCHANT_USER_TYPE, EMAIL_REQUIRED_MESSAGE, ENCRYPTION_DISABLE_KEY, SUCCESS_STATUS_CODE, 
+    VALIDATE_EMAIL_ENDPOINT, ERROR_MESSAGE_TITLE, SUCCESS_MESSAGE_TITLE
 } from '../../common/constants'
 import { connect } from 'react-redux'
 import  { Redirect } from 'react-router-dom'
@@ -26,7 +27,10 @@ class ForgotPassword extends Component
     state = {
         email: '',
         isEmailVerified: true,
-        emailVerificationMessage: EMAIL_REQUIRED_MESSAGE
+        emailVerificationMessage: EMAIL_REQUIRED_MESSAGE,
+        apiMessageHeading: '',
+        apiMessage: '',
+        isApiMessageContainerVisible: false
     }
 
     componentDidMount() 
@@ -53,18 +57,22 @@ class ForgotPassword extends Component
         }
         CommonHelpers.callApiAxios(VALIDATE_EMAIL_ENDPOINT, 'POST', params).then(response => 
         {
-            console.log(response)
             if (response.status_code === SUCCESS_STATUS_CODE)
             {
-               if (response.data.user_exists){}
+               if (response.data.user_exists)
+                    this.callForgotPasswordEmailApi()
                else
-                this.setState({
-                    isEmailVerified: false, 
-                    emailVerificationMessage: response.data.message
-                })
+                    this.setState({
+                        isEmailVerified: false, 
+                        emailVerificationMessage: response.data.message
+                    })
             }
-            else 
-              {}  
+            else
+                this.setState({
+                    isApiMessageContainerVisible: true, 
+                    apiMessage: response.message, 
+                    apiMessageHeading: ERROR_MESSAGE_TITLE
+                })
         })
     }
 
@@ -79,14 +87,19 @@ class ForgotPassword extends Component
         const authToken = this.props.authData.authToken
         CommonHelpers.callApiAxios(SEND_EMAIL_ENDPOINT, 'POST', params, authToken).then(response => 
         {
-            console.log(response)
             if (response.status_code === SUCCESS_STATUS_CODE)
+                this.setState({
+                    isApiMessageContainerVisible: true, 
+                    apiMessage: response.data.message, 
+                    apiMessageHeading: SUCCESS_MESSAGE_TITLE
+                })
+            else
             {
-                
-            }
-            else 
-            {
-                
+                this.setState({
+                    isApiMessageContainerVisible: true, 
+                    apiMessage: response.message, 
+                    apiMessageHeading: ERROR_MESSAGE_TITLE
+                })
             }
         })
     }
